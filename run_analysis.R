@@ -38,5 +38,5 @@ run_analysis <- function() {
   total <- total %>% group_by(activityname, subject) %>% summarize_each(funs(mean))
   
   ## write result to file
-  write.table(total, "tidyData.txt")
+  write.table(total, "tidyData.txt", row.names = FALSE)
 }
